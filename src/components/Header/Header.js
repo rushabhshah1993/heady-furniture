@@ -12,7 +12,7 @@ const Header = () => {
             <Logo size={'large'} />
             <div className={styles.headerNav}>
                 <FurnitureNavigation />
-                <UserIcons />
+                <UserIcons cartItems={'2'} />
             </div>
         </header>
     )

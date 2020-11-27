@@ -5,13 +5,14 @@
     padding-left: 0;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: 2rem;
 
     li {
         padding-right: 1rem;
         text-transform: uppercase;
         font-size: 14px;
         position: relative;
+        cursor: pointer;
     }
 
     li:last-child {
