@@ -1,0 +1,37 @@
+@mixin font($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('./assets/fonts/Roboto-' + $font-name + '.ttf')
+            format('truetype')
+    }
+}
+
+@include font('Bold');
+@include font('Medium');
+@include font('Regular');
+@include font('Thin');
+@include font('Light');
+@include font('MediumItalic');
+
+html {
+    height: 100%;
+    font-size: 16px;
+
+    * {
+        font-family: 'Light';
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #F0F0F0;
+    }
+
+    a,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+}
