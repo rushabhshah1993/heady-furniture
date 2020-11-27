@@ -1,0 +1,10 @@
+.socialMediaIconsContainer {
+    svg {
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    svg:last-child {
+        margin: 0;
+    }
+}

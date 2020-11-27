@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import './index.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 
 { faSearch, faHeart, faShoppingBag,
     faHome, faCaretRight
@@ -16,7 +16,8 @@ import store from './store/store';
 
 library.add(
     faSearch, faHeart, faShoppingBag, 
-    faHome, faCaretRight
+    faHome, faCaretRight, faFacebookF,
+    faTwitter, faPinterest
 );
 
 const main = (

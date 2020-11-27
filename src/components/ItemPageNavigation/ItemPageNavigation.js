@@ -10,7 +10,8 @@ const ItemPageNavigation = props => {
     const titleRef = useRef();
 
     const itemClickHandler = event => {
-        titleRef.current.innerHTML = event.target.innerText;
+        titleRef.current.innerHTML = event.target.innerText.toLowerCase();
+        titleRef.current.style.textTransform = "capitalize";
         // window.location.hash = "#related";
         let element = document.getElementById("related");
         console.log(element);

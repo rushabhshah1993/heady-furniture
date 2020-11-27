@@ -1,11 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import styles from './socialMediaIcons.scss';
 
 const SocialMediaIcons = () => {
     return (
-        <div>
-            <span>Facebook</span>
-            <span>Twitter</span>
-            <span>Pinterest</span>
+        <div className={styles.socialMediaIconsContainer}>
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+            <FontAwesomeIcon icon={['fab', 'twitter']} />
+            <FontAwesomeIcon icon={['fab', 'pinterest']} />
         </div>
     )
 }
