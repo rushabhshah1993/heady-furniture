@@ -25,10 +25,10 @@ const Main = () => {
             
             <div id="content">
                 <ItemPageNavigation />
-                <Details />
-                <Description />
-                <Reviews />
-                <Related />
+                <Details id="details" />
+                <Description id="description" />
+                <Reviews id="reviews" />
+                <Related id="related" />
             </div>
             <footer>
                 <Newsletter />
