@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 0 2%;
+
+    .headerNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

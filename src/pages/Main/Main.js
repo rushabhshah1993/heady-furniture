@@ -12,14 +12,14 @@ import Description from './../../sections/Description/Description';
 import Related from './../../sections/Related/Related';
 import Reviews from './../../sections/Reviews/Reviews';
 
+import Header from './../../components/Header/Header';
+
+import styles from './main.scss';
+
 const Main = () => {
     return (
         <div id="container">
-            <header>
-                <Logo size={'large'} />
-                <FurnitureNavigation />
-                <UserIcons />
-            </header>
+            <Header />
 
             <BreadCrumbs />
             

@@ -1,0 +1,40 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
+    li {
+        padding-right: 1rem;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+    }
+
+    li:last-child {
+        padding-right: 0;
+    }
+
+    li.active {
+        background: linear-gradient(45deg, #f9b700, transparent);
+        background-position: 50% 100%;
+        background-size: 100% 7px;
+        background-repeat: no-repeat;
+    }
+
+    // A hack to add an image to the active element
+    // li.active::after {
+    //     background-image: url('./../../assets/images/yellow-line.png');
+    //     background-size: 75px;
+    //     content: ".";
+    //     height: auto;
+    //     width: 100%;
+    //     position: absolute;
+    //     background-repeat: no-repeat;
+    //     bottom: -16px;
+    //     left: 0;
+    // }
+}

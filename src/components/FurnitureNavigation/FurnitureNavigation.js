@@ -1,10 +1,12 @@
 import React from 'react';
 
+import styles from './furnitureNavigation.scss';
+
 const FurnitureNavigation = () => {
     return (
         <>
-            <ul>
-                <li>Bedroom</li>
+            <ul className={styles.list}>
+                <li className={styles.active}>Bedroom</li>
                 <li>Living Room</li>
                 <li>Office</li>
                 <li>Kitchen</li>
