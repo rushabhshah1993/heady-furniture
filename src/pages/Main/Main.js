@@ -16,12 +16,14 @@ import Header from './../../components/Header/Header';
 
 import styles from './main.scss';
 
+let positions = ['Catalog', 'Sofas', 'Beige Nudie Sofa'];
+
 const Main = () => {
     return (
         <div id="container">
             <Header />
 
-            <BreadCrumbs />
+            <BreadCrumbs positions={positions} />
             
             <div id="content">
                 <ItemPageNavigation />

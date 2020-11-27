@@ -1,9 +1,38 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Breadcrumbs = () => {
+import styles from './breadcrumbs.scss';
+
+const Breadcrumbs = props => {
+    let crumbs = props.positions.map((page, index) => {
+        let crumbClasses = [styles.crumbItems];
+        if(index === props.positions.length-1)
+            crumbClasses.push(styles.activeCrumb);
+
+        return (
+            <>
+                <span className={crumbClasses.join(' ')}>
+                    {page}
+                </span>
+                {
+                    index !== props.positions.length-1 &&
+                    <FontAwesomeIcon 
+                        icon={'caret-right'} 
+                        size={'xs'}
+                        className={styles.caret} />
+                }
+            </>
+        )
+    });
+
     return (
-        <div>
-            Breadcrumbs
+        <div className={styles.breadcrumbsContainer}>
+            <FontAwesomeIcon icon={'home'} className={styles.crumbItems} />
+            <FontAwesomeIcon 
+                icon={'caret-right'} 
+                size={'xs'}
+                className={styles.caret} />
+            {crumbs}
         </div>
     )
 }
