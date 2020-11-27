@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+import './index.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import 
@@ -9,14 +12,20 @@ import
 
 import Main from './pages/Main/Main';
 
-import './index.scss';
+import store from './store/store';
 
 library.add(
     faSearch, faHeart, faShoppingBag, 
     faHome, faCaretRight
 );
 
+const main = (
+    <Provider store={store}>
+        <Main />
+    </Provider>
+)
+
 ReactDOM.render(
-    <Main />,
+    main,
     document.getElementById('root')
 )

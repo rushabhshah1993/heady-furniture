@@ -10,7 +10,7 @@ const Breadcrumbs = props => {
             crumbClasses.push(styles.activeCrumb);
 
         return (
-            <>
+            <React.Fragment key={page}>
                 <span className={crumbClasses.join(' ')}>
                     {page}
                 </span>
@@ -21,7 +21,7 @@ const Breadcrumbs = props => {
                         size={'xs'}
                         className={styles.caret} />
                 }
-            </>
+            </React.Fragment>
         )
     });
 

@@ -25,12 +25,14 @@ const Main = () => {
 
             <BreadCrumbs positions={positions} />
             
-            <div id="content">
+            <div id={styles.content}>
                 <ItemPageNavigation />
-                <Details id="details" />
-                <Description id="description" />
-                <Reviews id="reviews" />
-                <Related id="related" />
+                <div id={styles.mainContent}>
+                    <Details id="details" />
+                    <Description id="description" />
+                    <Reviews id="reviews" />
+                    <Related id="related" />
+                </div>
             </div>
             <footer>
                 <Newsletter />

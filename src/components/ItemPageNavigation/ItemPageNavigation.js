@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { connect } from 'react-redux';
+
 import SocialMediaIcons from './../../common/SocialMediaIcons/SocialMediaIcons';
 
-const ItemPageNavigation = () => {
-    const itemClickHandler = () => {
-        console.log("Here");
+import styles from './itemPageNavigation.scss';
+
+const ItemPageNavigation = props => {
+    const [title, setTitle] = useState("Details");
+    const titleRef = useRef();
+
+    const itemClickHandler = event => {
+        titleRef.current.innerHTML = event.target.innerText;
         // window.location.hash = "#related";
         let element = document.getElementById("related");
         console.log(element);
@@ -14,20 +21,40 @@ const ItemPageNavigation = () => {
         // })
     }
 
+    let navItems;
+    if(props.navItem) {
+        navItems = props.navItem.navItems.map(item => {
+            return (
+                <li
+                    key={item.id}
+                    id={item.id}
+                    className={styles.navItem}
+                    onClick={(event) => itemClickHandler(event)}>
+                    {item.name}
+                </li>
+            )
+        })
+    }
+
     return (
-        <>
-            <div id="page-title">Title</div>
-            <nav id="navigation">
-                <ul>
-                    <li>Details</li>
-                    <li>Description</li>
-                    <li>Reviews</li>
-                    <li onClick={itemClickHandler}>Related</li>
-                </ul>
-            </nav>
-            <SocialMediaIcons />
-        </>
+        <div id={styles.itemPageNavContainer}>
+            <div id={styles.pageTitle} ref={titleRef}>{title}</div>
+            <div id={styles.navContainer}>
+                <nav id={styles.navigation}>
+                    <ul>
+                        {navItems}
+                    </ul>
+                </nav>
+                <SocialMediaIcons />
+            </div>
+        </div>
     )
 }
 
-export default ItemPageNavigation;
+const mapStateToProps = state => {
+    return {
+        navItem: state.navItem
+    }
+}
+
+export default connect(mapStateToProps)(ItemPageNavigation);
