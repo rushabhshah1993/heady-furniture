@@ -16,7 +16,7 @@ const Main = () => {
     return (
         <div id="container">
             <header>
-                <Logo />
+                <Logo size={'large'} />
                 <FurnitureNavigation />
                 <UserIcons />
             </header>
@@ -33,7 +33,7 @@ const Main = () => {
             <footer>
                 <Newsletter />
                 <FurnitureNavigation />
-                <Logo />
+                <Logo size={'small'} />
                 <SocialMediaIcons />
             </footer>
         </div>

@@ -1,9 +1,15 @@
 import React from 'react';
+import Icon from './../../assets/images/favicon.png';
 
-const Logo = () => {
+import styles from './Logo.scss';
+
+const Logo = props => {
     return (
-        <div>
-            Logo
+        <div className="logo">
+            <img 
+                src={Icon} 
+                alt="Heady Furniture Logo"
+                className={styles[props.size] || styles.small} />
         </div>
     )
 }
