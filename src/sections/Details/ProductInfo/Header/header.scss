@@ -1,0 +1,37 @@
+$boldFont: 'Bold';
+$verticalSpace: 1.5rem;
+
+.header {
+    border-bottom: 1px solid #E5E5E5;
+
+    .productTitle {
+        font-size: 32px;
+        font-family: $boldFont;
+        margin: 0 0 8px;
+    }
+
+    .subHeader {
+        margin-bottom: $verticalSpace;
+
+        .reviewsCount {
+            margin-left: .5rem;
+            color: #AFAFAF;
+            font-family: $boldFont;
+        }
+    }
+
+    .price {
+        font-size: 20px;
+        margin-bottom: $verticalSpace;
+
+        .originalPrice {
+            text-decoration: line-through;
+            color: #AFAFAF;
+            margin-right: .5rem;
+        }
+
+        .discountPrice {
+            font-family: $boldFont;
+        }
+    }
+}

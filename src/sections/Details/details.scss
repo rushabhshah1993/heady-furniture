@@ -1,0 +1,29 @@
+.detailsContainer {
+    height: 100vh - 10vh;
+    position: relative;
+
+    .infoContainer,
+    .imgContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .infoContainer {
+        height: 80%;
+        width: 100%;
+        background-color: #FFFFFF;
+        margin-left: 50px;
+    }
+
+    .imgContainer {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 80%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

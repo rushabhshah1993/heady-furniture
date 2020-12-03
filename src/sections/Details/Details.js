@@ -1,11 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
-const Details = () => {
+import styles from './details.scss';
+
+import ProductInfo from './ProductInfo/ProductInfo';
+
+import FurnitureImg from './../../assets/images/furniture.png';
+
+const Details = props => {
+    let selectedProduct = props.products.allProducts.find(product => product.id === props.products.selectedProduct);
+    console.log(selectedProduct);
     return (
-        <div>
-            Details
+        <div className={styles.detailsContainer}>
+            <div className={styles.infoContainer}>
+                <ProductInfo product={selectedProduct}/>
+            </div>
+            <div className={styles.imgContainer}>
+                <img src={FurnitureImg} />
+            </div>
         </div>
     )
 }
 
-export default Details
+const mapStateToProps = state => {
+    return {
+        products: state.products
+    }
+}
+
+export default connect(mapStateToProps)(Details)

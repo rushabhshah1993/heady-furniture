@@ -1,0 +1,29 @@
+.colorsContainer {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: 'Medium';
+        margin-top: 0;
+    }
+
+    .allColors {
+        display: flex;
+        flex-direction: row;
+
+        .color {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: 1px solid #E5E5E5;
+            margin-right: .5rem;
+            text-align: center;
+        }
+
+        .color:last-child {
+            margin-right: 0;
+        }
+    }
+}
