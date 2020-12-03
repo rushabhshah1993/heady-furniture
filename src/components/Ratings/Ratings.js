@@ -13,6 +13,7 @@ const Ratings = props => {
                 style={{
                     color: props.rating < i+1 ? '#EAEAEA' : '#FED543'
                 }}
+                size={props.size}
             />
         )
     }

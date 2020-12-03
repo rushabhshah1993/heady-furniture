@@ -55,39 +55,63 @@ const initalState = {
             ],
             reviews: [
                 {
-                    username: 'John Doe',
+                    username: 'Harishan Kobalasingam',
                     rating: 4,
                     date: '08/28/2020',
                     title: 'Excellent',
-                    desc: 'Lorem Ipsum '
+                    desc: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,`,
+                    profilePicTitle: 'harishan-kobalasingam.jpg',
+                    id: 1
                 },
                 {
-                    username: 'Jane Dias',
+                    username: 'Kelly Sikkema',
                     rating: 3,
                     date: '05/10/2018',
                     title: 'Good Product',
-                    desc: 'Lorem Ipsum '
+                    desc: `Et harum quidem rerum facilis est et expedita distinctio. 
+                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+                    maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                    Temporibus autem quibusdam et aut `,
+                    profilePicTitle: 'kelly-sikkema.jpg',
+                    id: 2
                 },
                 {
-                    username: 'John Stan',
+                    username: 'Luis Villasmil',
                     rating: 5,
                     date: '09/01/2016',
-                    title: 'Excellent',
-                    desc: 'Lorem Ipsum '
+                    title: 'I love the product!',
+                    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                    voluptate velit esse cillum dolore`,
+                    profilePicTitle: 'luis-villasmil.jpg',
+                    id: 3
                 },
                 {
-                    username: 'John Doe',
-                    rating: 4,
+                    username: 'Sergion De Paula',
+                    rating: 2,
                     date: '08/28/2016',
-                    title: 'Excellent',
-                    desc: 'Lorem Ipsum '
+                    title: 'Could have been better...',
+                    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                    velit esse cillum dolore`,
+                    profilePicTitle: 'sergio-de-paula.jpg',
+                    id: 4
                 },
                 {
-                    username: 'John Doe',
+                    username: 'Stefan Stefancik',
                     rating: 4,
                     date: '08/28/2016',
-                    title: 'Excellent',
-                    desc: 'Lorem Ipsum '
+                    title: 'Fantastic',
+                    desc: `minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates 
+                    repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
+                    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat`,
+                    profilePicTitle: 'stefan-stefancik.jpg',
+                    id: 5
                 }
             ]
         }

@@ -1,0 +1,32 @@
+.reviewsContainer {
+    height: 100vh - 10vh;
+
+    .reviewsContainerTitle {
+        font-size: 1.75rem;
+        font-family: 'Bold';
+        margin-top: 0;
+
+    }
+
+    .reviews {
+        height: 600px;
+        overflow: auto;
+        border-bottom: 1px solid #EAEAEA;
+    }
+
+    .hideReviews {
+        height: 275px;
+        overflow: hidden;
+    }
+
+    .loadMore {
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #FDD643;
+        text-decoration-thickness: 3px;
+        font-size: 14px;
+        font-family: 'Medium';
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+}
