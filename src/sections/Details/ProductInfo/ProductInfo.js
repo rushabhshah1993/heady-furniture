@@ -6,9 +6,9 @@ import Header from './Header/Header';
 import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 import Policies from './Policies/Policies';
 import Colors from './Colors/Colors';
+import AddToCart from './../../../components/AddToCart/AddToCart';
 
 const ProductInfo = props => {
-    console.log(props);
     let product = props.product;
 
     return (
@@ -24,6 +24,7 @@ const ProductInfo = props => {
             <AdditionalInfo info={product.additionalInfo} />
             <Policies policies={product.policies} />
             <Colors colors={product.colors} />
+            <AddToCart />
         </div>
     )
 }

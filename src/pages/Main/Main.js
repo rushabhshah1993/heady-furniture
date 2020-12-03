@@ -12,7 +12,7 @@ import Description from './../../sections/Description/Description';
 import Related from './../../sections/Related/Related';
 import Reviews from './../../sections/Reviews/Reviews';
 
-import Header from './../../components/Header/Header';
+import PageHeader from '../../components/PageHeader/PageHeader';
 
 import styles from './main.scss';
 
@@ -21,7 +21,7 @@ let positions = ['Catalog', 'Sofas', 'Beige Nudie Sofa'];
 const Main = () => {
     return (
         <div id="container">
-            <Header />
+            <PageHeader />
 
             <BreadCrumbs positions={positions} />
             

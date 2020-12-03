@@ -6,10 +6,10 @@ import styles from './colors.scss';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Colors = props => {
-    console.log(props);
     let elements = props.colors.map(color => {
         return (
             <div 
+                key={color.color}
                 style={{
                     backgroundColor: color.color
                 }}

@@ -8,7 +8,7 @@ const UserIcons = props => {
         <div className={styles.userIconsContainer}>
             <FontAwesomeIcon 
                 icon="search" 
-                title={'Search'} 
+                title={'Search'}
                 size={'lg'} />
             <FontAwesomeIcon 
                 icon={['fas', 'heart']} 
@@ -20,7 +20,7 @@ const UserIcons = props => {
                     title={'Cart'}
                     size={'lg'} />
                 {
-                    props.cartItems &&
+                    props.cartItems !== null &&
                     <div id={styles.cartBadge}>
                         {props.cartItems}
                     </div>

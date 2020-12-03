@@ -1,0 +1,36 @@
+.addToCartContainer {
+    display: flex;
+    flex-direction: row;
+
+    .counter {
+        background-color: #EEEEEE;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 35%;
+        padding: 8px;
+
+        .lessBtn,
+        .moreBtn {
+            color: #ACACAC;
+            font-family: 'Medium';
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .count {
+            font-family: 'Medium';
+        }
+    }
+
+    .addCartBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        width: 50%;
+        background-color: #FED441;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+}
