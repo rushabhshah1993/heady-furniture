@@ -27,7 +27,7 @@ const Main = () => {
             
             <div id={styles.content}>
                 <ItemPageNavigation />
-                <div id={styles.mainContent}>
+                <div id={styles.mainContent} data-spy={'scroll'} data-target={'.navigation'}>
                     <Details id="details" />
                     <Description id="description" />
                     <Reviews id="reviews" />

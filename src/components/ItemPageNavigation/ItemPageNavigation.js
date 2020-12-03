@@ -13,25 +13,41 @@ const ItemPageNavigation = props => {
         titleRef.current.innerHTML = event.target.innerText.toLowerCase();
         titleRef.current.style.textTransform = "capitalize";
         // window.location.hash = "#related";
-        let element = document.getElementById("related");
-        console.log(element);
-        element.scrollIntoView({behavior: "smooth"});
-        // window.scrollTo({
-        //     top: '0',
-        //     behavior: 'smooth'
-        // })
+        event.stopPropagation();
+        let element = document.getElementById(event.target.id);
+        // debugger;
+        console.log(element, element.offsetTop, element.getBoundingClientRect());
+        // element.scrollIntoView({behavior: "smooth"});
+        console.log(document.getElementById('header'));
+        let top;
+        switch(event.target.id) {
+            case "nav-description": top = 20; break;
+            case "nav-details": top = 640; break;
+            case "nav-reviews": top = 840; break;
+            case "nav-related": top = 1840; break;
+        }
+        window.scrollTo({
+            // top: element.getBoundingClientRect().top,
+            // top: element.getBoundingClientRect().top -  document.getElementById('header').offsetHeight,
+            // top: element.offsetTop - document.getElementById('header').offsetHeight,
+            top: top,
+            behavior: 'smooth'
+        })
     }
 
     let navItems;
     if(props.navItem) {
         navItems = props.navItem.navItems.map(item => {
+            console.log(item);
             return (
                 <li
                     key={item.id}
-                    id={item.id}
+                    id={`nav-${item.id}`}
                     className={styles.navItem}
                     onClick={(event) => itemClickHandler(event)}>
-                    {item.name}
+                    <a href={`#${item.id}`}>
+                        {item.name}
+                    </a>
                 </li>
             )
         })
@@ -41,7 +57,7 @@ const ItemPageNavigation = props => {
         <div id={styles.itemPageNavContainer}>
             <div id={styles.pageTitle} ref={titleRef}>{title}</div>
             <div id={styles.navContainer}>
-                <nav id={styles.navigation}>
+                <nav id={styles.navigation} className={'navigation'}>
                     <ul>
                         {navItems}
                     </ul>

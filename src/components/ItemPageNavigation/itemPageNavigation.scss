@@ -3,6 +3,7 @@
     left: 0;
     width: 30%;
     margin-left: 5%;
+    top: 35%;
 
     #pageTitle {
         margin-top: 100%;
@@ -34,6 +35,10 @@
                     font-size: 14px;
                     margin-bottom: 3rem;
                     text-align: right;
+
+                    a {
+                        pointer-events: none;
+                    }
                 }
         
                 li:last-child {

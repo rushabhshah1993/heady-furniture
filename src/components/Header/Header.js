@@ -8,7 +8,7 @@ import UserIcons from '../../common/UserIcons/UserIcons';
 
 const Header = () => {
     return (
-        <header className={styles.header}>
+        <header id="header" className={styles.header}>
             <Logo size={'large'} />
             <div className={styles.headerNav}>
                 <FurnitureNavigation />

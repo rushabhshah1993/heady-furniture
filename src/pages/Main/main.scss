@@ -6,4 +6,8 @@
 
 #mainContent {
     margin-left: 30%;
+
+    > div {
+        height: 100vh;
+    }
 }
