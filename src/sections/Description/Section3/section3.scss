@@ -1,0 +1,66 @@
+.section3Container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .asideText {
+        transform: rotate(180deg);
+        direction: rtl;
+        writing-mode: vertical-rl;
+        flex-basis: 10%;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .asideText:before {
+        background-color: #000;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 70%;
+        right: 0.5em;
+        margin-left: 0.5rem;
+        writing-mode: vertical-rl;
+        transform: rotate(90deg);
+        direction: rtl;
+        top: -200px;
+    }
+
+    .mainImg {
+        flex-basis: 90%;
+        background: url('./../../../assets/images/beige-nudie-2.jpg');
+        background-size: cover;
+        position: relative;
+
+        .downloadBtn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 3rem;
+            background-color: #FED641;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            svg {
+                margin-right: 8px;
+            }
+            
+            span {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: 'Medium';
+            }
+        }
+    }
+
+    .secondaryImg {
+        position: absolute;
+        top: 60%;
+        width: 35%;
+        height: 35%;
+    }
+}

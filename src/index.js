@@ -7,7 +7,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 
 { faSearch, faHeart, faShoppingBag,
-    faHome, faCaretRight, faStar, faShippingFast, faUndo, faCheck, faPlayCircle
+    faHome, faCaretRight, faStar, 
+    faShippingFast, faUndo, faCheck, 
+    faPlayCircle, faArrowCircleDown
 } from '@fortawesome/free-solid-svg-icons';
 
 import Main from './pages/Main/Main';
@@ -19,7 +21,7 @@ library.add(
     faHome, faCaretRight, faFacebookF,
     faTwitter, faPinterest, faStar,
     faShippingFast, faUndo, faCheck,
-    faPlayCircle
+    faPlayCircle, faArrowCircleDown
 );
 
 const main = (
