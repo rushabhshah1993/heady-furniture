@@ -1,0 +1,29 @@
+.section1Container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .textContainer {
+        flex-basis: 20%;
+        align-self: flex-end;
+        margin-right: 2rem;
+        font-size: 14px;
+        word-break: break-all;
+    }
+
+    .imgContainer {
+        flex-basis: 75%;
+        background: url('./../../../assets/images/beige-nudie-5.jpg');
+        background-size: cover;
+    }
+
+    .section1Title {
+        position: absolute;
+        top: 0;
+        font-size: 1.75rem;
+        font-family: 'Bold';
+        width: 45%;
+        padding: 3.5rem 3.5rem 3.5rem 0;
+        background-color: #F0F0F0;
+    }
+}
