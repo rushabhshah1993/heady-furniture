@@ -10,16 +10,12 @@ const ItemPageNavigation = props => {
     const titleRef = useRef();
 
     const itemClickHandler = event => {
-        titleRef.current.innerHTML = event.target.innerText.toLowerCase();
-        titleRef.current.style.textTransform = "capitalize";
-        // window.location.hash = "#related";
-        let element = document.getElementById("related");
-        console.log(element);
-        element.scrollIntoView({behavior: "smooth"});
-        // window.scrollTo({
-        //     top: '0',
-        //     behavior: 'smooth'
-        // })
+        let sections = props.navItem.sectionsDimensions;
+        let selectedSection = sections.find(section => section.id === event.target.id);
+        window.scrollTo({
+            top: selectedSection.top,
+            behavior: 'smooth'
+        })
     }
 
     let navItems;

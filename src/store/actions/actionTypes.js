@@ -1,1 +1,3 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
+
+export const SET_SECTIONS_DIMENSIONS = 'SET_SECTIONS_DIMENSIONS';

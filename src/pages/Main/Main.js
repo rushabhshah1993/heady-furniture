@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import ItemPageNavigation from '../../components/ItemPageNavigation/ItemPageNavigation';
 import FurnitureNavigation from './../../components/FurnitureNavigation/FurnitureNavigation';
@@ -16,13 +17,13 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 
 import styles from './main.scss';
 
-import {
-    getSections
-} from './../../utils/utils';
+import { getSections } from './../../utils/utils';
+import { setSectionsDimensions } from './../../store/actions/navItemActions';
+
 
 let positions = ['Catalog', 'Sofas', 'Beige Nudie Sofa'];
 
-const Main = () => {
+const Main = props => {
     const [sections, setSections] = useState();
     const [activeSection, setActiveSection] = useState("details");
     
@@ -35,6 +36,7 @@ const Main = () => {
         if(mainContentChildren) {    
             let sections = getSections(mainContentChildren);
             setSections(sections);
+            props.setSectionsDimensions(sections);
             setActiveSection("details");
         }
     }, [window.scrollY === 0])
@@ -43,7 +45,7 @@ const Main = () => {
     window.addEventListener('scroll', function() {
         if(sections) {
             for(let section of sections) {
-                if(this.scrollY < section.bottom) {
+                if(this.scrollY < section.bottom && this.scrollY > section.top) {
                     setActiveSection(section.id);
                     break;
                 }
@@ -64,7 +66,7 @@ const Main = () => {
             
             <div id={styles.content}>
                 <ItemPageNavigation activeSection={activeSection} />
-                <div id={styles.mainContent}>
+                <div id={styles.mainContent} className={"mainContent"}>
                     <Details />
                     <Description />
                     <Reviews />
@@ -84,4 +86,10 @@ const Main = () => {
     )
 }
 
-export default Main;
+const mapDispatchToProps = dispatch => {
+    return {
+        setSectionsDimensions: sections => dispatch(setSectionsDimensions(sections))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Main);

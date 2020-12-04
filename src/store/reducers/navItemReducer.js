@@ -1,3 +1,5 @@
+import * as actionTypes from './../actions/actionTypes';
+
 const initalState = {
     navItems: [
         {
@@ -16,11 +18,17 @@ const initalState = {
             name: "Related",
             id: 'related'
         }
-    ]
+    ],
+    sectionsDimensions: []
 }
 
 const reducer = (state = initalState, action) => {
     switch(action.type) {
+        case actionTypes.SET_SECTIONS_DIMENSIONS:
+            return {
+                ...state,
+                sectionsDimensions: action.sections
+            }
         default: return state;
     }
 }
