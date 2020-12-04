@@ -17,4 +17,6 @@ To use this application,
 3. Type `npm install` to install the dependencies.
 4. Type `npm start` to start the application.
 
+#### NOTE: All images used in this project are copyright protected by their respective owners. No copyright infringement intended. Kindly follow the links on the images to contact the respective owners for commercial usage.
+
 #### NOTE: [December 5, 2020 02:58] This application has solely been created and tested on Google Chrome browser. It might not work properly on other browsers.
