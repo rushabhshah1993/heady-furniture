@@ -34,11 +34,14 @@ const Main = () => {
                     <Related id="related" />
                 </div>
             </div>
-            <footer>
+
+            <footer className={styles.footer}>
                 <Newsletter />
-                <FurnitureNavigation />
-                <Logo size={'small'} />
-                <SocialMediaIcons />
+                <div className={styles.infoSection}>
+                    <FurnitureNavigation />
+                    <Logo size={'small'} />
+                    <SocialMediaIcons />
+                </div>
             </footer>
         </div>
     )

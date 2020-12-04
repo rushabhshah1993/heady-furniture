@@ -1,11 +1,31 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    background-color: #FFFFFF;
+#content {   
+    margin-bottom: 3rem;
+    
+    #mainContent {
+        margin-left: 30%;
+        width: 70%;
+        overflow-x: hidden;
+    }
 }
 
-#mainContent {
-    margin-left: 30%;
-    width: 70%;
-    overflow-x: hidden;
+.footer {
+    background-color: #FED641;
+    padding-left: 10%;
+
+    .infoSection {
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        align-items: center;
+        margin-right: 16px;
+
+        :global .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }

@@ -8,7 +8,7 @@ const Related = props => {
 
     let relatedProducts = selectedProduct.related.map(product => {
         return (
-            <div className={styles.relatedProduct}>
+            <div className={styles.relatedProduct} key={product.id}>
                 <img src={product.image} className={styles.productImage} />
                 <div className={styles.productInfo}> 
                     <span className={styles.productName}>{product.name}</span>

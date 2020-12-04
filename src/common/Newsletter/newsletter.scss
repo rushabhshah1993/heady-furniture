@@ -1,0 +1,13 @@
+.newsletterContainer {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #adadad;
+
+    p {
+        font-size: 1.75rem;
+        font-family: 'Medium';
+        border-bottom: 1px solid #adadad;
+    }
+}
