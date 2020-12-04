@@ -25,10 +25,6 @@ const initalState = {
                     selected: false
                 }
             ],
-            policies: {
-                sameDayDispatch: true,
-                return30Days: true
-            },
             policies: [
                 {
                     id: 'sameDayDispatch',
@@ -113,10 +109,70 @@ const initalState = {
                     profilePicTitle: 'stefan-stefancik.jpg',
                     id: 5
                 }
+            ],
+            related: [
+                {
+                    id: '002',
+                    name: 'Bamboo Fiber Gogo',
+                    image: 'https://cdn.webshopapp.com/shops/9368/files/285379107/hay-pc-hanging-lamp.jpg',
+                    mrp: 169,
+                    discountPrice: 149
+                },
+                {
+                    id: '003',
+                    name: 'Velvet Tub Chair',
+                    image: 'https://www.rhubarb-malvern.co.uk/wp-content/uploads/2019/09/velvet-tub-chair.jpg',
+                    mrp: 180,
+                    discountPrice: 120
+                },
+                {
+                    id: '004',
+                    name: 'Oled Ring Light',
+                    image: 'https://5.imimg.com/data5/AJ/SN/MY-13117264/hanging-lamp-500x500.jpg',
+                    mrp: 109,
+                    discountPrice: 99
+                },
+                {
+                    id: '005',
+                    name: 'Tesero Dark Velvet Tub Chair',
+                    image: 'https://www.styleourhome.com/pub/media/catalog/product/cache/826741dbf221e17ec01ef9f5760123dd/5/0/5056315930353-750x750.jpg',
+                    mrp: 169,
+                    discountPrice: 149
+                },
+                {
+                    id: '006',
+                    name: 'Globe Hanging Lamp',
+                    image: 'https://www.auroville.com/media/catalog/product/cache/7dffcbb19665944c41b14ffbe9ad02d0/g/1/g130wshx2_1.jpg',
+                    mrp: 89,
+                    discountPrice: 79
+                },
+                {
+                    id: '007',
+                    name: 'Round End Table',
+                    image: 'https://images.furnituredealer.net/img/products%2Fhammary%2Fcolor%2Fhammary%20promenade_t2001835-11-b.jpg',
+                    mrp: 269,
+                    discountPrice: 249
+                },
+                {
+                    id: '008',
+                    name: 'Gamer Table',
+                    image: 'https://cdn.trendhunterstatic.com/thumbs/living-room-table.jpeg',
+                    mrp: 449,
+                    discountPrice: 369
+                },
+                {
+                    id: '009',
+                    name: 'Planters',
+                    image: 'https://i.pinimg.com/originals/da/a6/53/daa653c92eca488400996278c3b83e46.jpg',
+                    mrp: 269,
+                    discountPrice: 249
+                },
+                
             ]
         }
     ],
-    selectedProduct: "001"
+    selectedProduct: "001",
+    currency: '$'
 }
 
 const reducer = (state=initalState, action) => {
