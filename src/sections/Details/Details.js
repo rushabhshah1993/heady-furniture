@@ -11,7 +11,7 @@ const Details = props => {
     let selectedProduct = props.products.allProducts.find(product => product.id === props.products.selectedProduct);
     
     return (
-        <div className={styles.detailsContainer}>
+        <div className={styles.detailsContainer} id="details">
             <div className={styles.infoContainer}>
                 <ProductInfo product={selectedProduct}/>
             </div>

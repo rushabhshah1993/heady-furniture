@@ -26,7 +26,7 @@ const Reviews = props => {
     }
 
     return (
-        <div className={styles.reviewsContainer}>
+        <div className={styles.reviewsContainer} id="reviews">
             <p className={styles.reviewsContainerTitle}>
                 {selectedProduct.reviews.length} Reviews for {selectedProduct.name}
             </p>

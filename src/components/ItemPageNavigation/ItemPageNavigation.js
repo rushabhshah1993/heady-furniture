@@ -38,8 +38,8 @@ const ItemPageNavigation = props => {
     }
 
     return (
-        <div id={styles.itemPageNavContainer}>
-            <div id={styles.pageTitle} ref={titleRef}>{title}</div>
+        <div id={styles.itemPageNavContainer} style={{display: props.activeSection !== null ? 'block' : 'none'}}>
+            <div id={styles.pageTitle} ref={titleRef}>{props.activeSection}</div>
             <div id={styles.navContainer}>
                 <nav id={styles.navigation}>
                     <ul>
