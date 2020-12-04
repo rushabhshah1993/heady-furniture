@@ -1,3 +1,5 @@
+@import './utils/variables.scss';
+
 @mixin font($font-name) {
     @font-face {
         font-family: $font-name;
@@ -34,5 +36,13 @@ html {
     a:hover,
     a:active {
         text-decoration: none;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    body {
+        margin-left: 0 !important;
     }
 }

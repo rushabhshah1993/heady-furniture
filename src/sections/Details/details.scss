@@ -1,3 +1,5 @@
+@import './../../utils/variables.scss';
+
 .detailsContainer {
     height: 100vh - 10vh;
     position: relative;
@@ -25,5 +27,27 @@
             max-width: 100%;
             max-height: 100%;
         }
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .detailsContainer {
+        height: auto;
+        margin-bottom: 2rem;
+
+        .infoContainer {
+            margin-left: 0;
+        }
+
+        .imgContainer {
+            margin-left: 5%;
+            margin-right: 5%;
+            height: auto;
+            width: initial;
+            top: -2%;
+        }
+
     }
 }

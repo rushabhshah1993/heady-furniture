@@ -1,3 +1,5 @@
+@import "./../../utils/variables.scss";
+
 .breadcrumbsContainer {
     margin: 2rem 0;
 
@@ -20,5 +22,13 @@
     .activeCrumb {
         color: initial;
         font-weight: bold;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .breadcrumbsContainer {
+        display: none;
     }
 }

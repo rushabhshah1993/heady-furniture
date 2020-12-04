@@ -1,31 +1,77 @@
-#content {   
-    margin-bottom: 3rem;
-    
-    #mainContent {
-        margin-left: 30%;
-        width: 70%;
-        overflow-x: hidden;
+@import './../../utils/variables.scss';
+
+.container{
+    #content {   
+        margin-bottom: 3rem;
+        
+        #mainContent {
+            margin-left: 30%;
+            width: 70%;
+            overflow-x: hidden;
+        }
+    }
+
+    .footer {
+        background-color: #FED641;
+        padding-left: 10%;
+
+        .infoSection {
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
+            align-items: center;
+            margin-right: 16px;
+
+            :global .logo {
+                display: flex;
+                justify-content: center;
+            }
+
+            div:last-child {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
     }
 }
 
-.footer {
-    background-color: #FED641;
-    padding-left: 10%;
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    #content {
+        #mainContent {
+            margin-top: 5vh;
+            margin-left: 0 !important;
+            width: 100% !important;
+            padding: 0 5%;
+            overflow-x: unset !important;
+        }
+    }
 
-    .infoSection {
-        display: grid;
-        grid-template-columns: 40% 20% 40%;
-        align-items: center;
-        margin-right: 16px;
-
-        :global .logo {
+    .footer {
+        :global #furnitureNav {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            order: 1;
+            margin-right: 0;
+            
+            li {
+                padding-right: 0;
+                margin-bottom: .5rem;
+            }
+        }
+        
+        :global #socialMedia {
+            order: 2;
+            margin-bottom: 1rem;
         }
 
-        div:last-child {
-            display: flex;
-            justify-content: flex-end;
+        :global .logo {
+            order: 0;
+        }
+
+        .infoSection {
+            display: flex !important;
+            flex-direction: column;
         }
     }
 }

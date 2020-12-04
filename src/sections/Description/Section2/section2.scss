@@ -1,3 +1,5 @@
+@import './../../../utils/variables.scss';
+
 .section2Container {
     position: relative;
     background: url('./../../../assets/images/beige-nudie-3.jpg');
@@ -29,5 +31,23 @@
         width: 45%;
         padding: 3.5rem 3.5rem 3.5rem 0;
         background-color: #F0F0F0;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .section2Container {
+        height: 30vh !important;
+
+        .section2Title {
+            position: static;
+            padding: 5%;
+            width: auto;
+            font-size: 1.5rem;
+            background-color: #FFFFFF;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 }

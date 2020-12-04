@@ -36,7 +36,8 @@ const Main = props => {
         if(mainContentChildren) {    
             let sections = getSections(mainContentChildren);
             setSections(sections);
-            props.setSectionsDimensions(sections);
+            if(props.navItem.sectionsDimensions.length === 0)
+                props.setSectionsDimensions(sections);
             setActiveSection("details");
         }
     }, [window.scrollY === 0])
@@ -59,7 +60,7 @@ const Main = props => {
     })
 
     return (
-        <div id="container">
+        <div id="container" className={styles.container}>
             <PageHeader />
 
             <BreadCrumbs positions={positions} />
@@ -86,10 +87,16 @@ const Main = props => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        navItem: state.navItem
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         setSectionsDimensions: sections => dispatch(setSectionsDimensions(sections))
     }
 }
 
-export default connect(null, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

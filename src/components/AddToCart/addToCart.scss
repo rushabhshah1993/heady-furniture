@@ -1,3 +1,5 @@
+@import './../../utils/variables.scss';
+
 .addToCartContainer {
     display: flex;
     flex-direction: row;
@@ -32,5 +34,17 @@
         background-color: #FED441;
         color: #FFFFFF;
         cursor: pointer;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .addToCartContainer {
+        margin-bottom: 32px;
+
+        .counter {
+            width: 50%;
+        }
     }
 }

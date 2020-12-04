@@ -1,3 +1,5 @@
+@import './../../utils/variables.scss';
+
 .socialMediaIconsContainer {
     svg {
         margin-right: 1rem;
@@ -6,5 +8,13 @@
 
     svg:last-child {
         margin: 0;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .socialMediaIconsContainer {
+        display: none;
     }
 }

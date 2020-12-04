@@ -1,4 +1,19 @@
+@import './../../../utils/variables.scss';
+
 .productInfoContainer {
     margin-left: 55%;
     width: 30%;
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .productInfoContainer {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40vh;
+        padding: 0 10%;
+    }
 }

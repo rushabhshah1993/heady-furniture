@@ -1,3 +1,5 @@
+@import './../../../utils/variables.scss';
+
 .reviewContainer {
     display: flex;
     flex-direction: row;
@@ -63,6 +65,21 @@
             text-decoration-color: #FDD643;
             text-decoration-thickness: 2px;
             width: auto;
+        }
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .reviewContainer {
+        flex-direction: column;
+
+        .reviewBox {
+            .reviewDesc {
+                margin-top: 1rem;
+                width: 100%;
+            }
         }
     }
 }

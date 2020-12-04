@@ -1,3 +1,5 @@
+@import './../../../../utils/variables.scss';
+
 $boldFont: 'Bold';
 $verticalSpace: 1.5rem;
 
@@ -32,6 +34,16 @@ $verticalSpace: 1.5rem;
 
         .discountPrice {
             font-family: $boldFont;
+        }
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .header {
+        .productTitle {
+            font-size: 28px;
         }
     }
 }

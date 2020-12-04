@@ -1,3 +1,5 @@
+@import './../../../utils/variables.scss';
+
 .section1Container {
     display: flex;
     flex-direction: row;
@@ -25,5 +27,40 @@
         width: 45%;
         padding: 3.5rem 3.5rem 3.5rem 0;
         background-color: #F0F0F0;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .section1Container {
+        background-color: #FFFFFF;
+        flex-direction: column;
+        margin-bottom: 3rem !important;
+
+        .imgContainer {
+            order: 0;
+            height: auto;
+            margin: 0 5% 10%;
+        }
+
+        .textContainer {
+            order: 2;
+            margin-right: 0;
+            align-self: unset;
+            padding: 0 10% 0 5%;
+            font-size: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .section1Title {
+            order: 1;
+            position: static;
+            background-color: #FFFFFF;
+            width: 100%;
+            padding: 0 5%;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
     }
 }

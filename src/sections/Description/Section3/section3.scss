@@ -1,3 +1,5 @@
+@import './../../../utils/variables.scss';
+
 .section3Container {
     display: flex;
     flex-direction: row;
@@ -13,7 +15,7 @@
         font-family: 'Medium';
     }
 
-    .asideText:before {
+    .asideText::before {
         background-color: #000;
         content: "";
         display: inline-block;
@@ -26,7 +28,7 @@
         writing-mode: vertical-rl;
         transform: rotate(90deg);
         direction: rtl;
-        top: -200px;
+        top: -140px;
         font-family: 'Medium';
     }
 
@@ -64,5 +66,31 @@
         top: 60%;
         width: 35%;
         height: 35%;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .section3Container {
+        .mainImg {
+            .downloadBtn {
+                bottom: unset;
+                top: 0;
+            }
+        }
+
+        .asideText {
+            font-size: 12px;
+        }
+
+        .asideText::before {
+            
+        }
+
+        .secondaryImg {
+            width: 90%;
+            height: auto;
+        }
     }
 }

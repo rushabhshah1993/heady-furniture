@@ -1,3 +1,5 @@
+@import './../../utils/variables.scss';
+
 .newsletterContainer {
     height: 250px;
     display: flex;
@@ -9,5 +11,13 @@
         font-size: 1.75rem;
         font-family: 'Medium';
         border-bottom: 1px solid #adadad;
+    }
+}
+
+@media screen and 
+(min-width: $breakpoint-phone) and 
+(max-width: $breakpoint-tablet) {
+    .newsletterContainer {
+        display: none;
     }
 }
