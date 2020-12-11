@@ -4,7 +4,8 @@
     position: relative;
     background: url('./../../../assets/images/beige-nudie-3.jpg');
     background-size: cover;
-    // transition: 
+    transition: width 3s;
+    width: 0%;
 
     .backdrop {
         width: 100%;
@@ -20,7 +21,7 @@
         position: absolute;
         top: 0;
         // left: 0;
-        width: 0%;
+        // width: 0%;
         transition: width 1s;
     }
 

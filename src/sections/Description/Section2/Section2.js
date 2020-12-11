@@ -11,7 +11,7 @@ const Section2 = () => {
         left = '-100%';
 
     window.addEventListener('load', event => {
-        element = document.querySelector(`.${styles.cover}`);
+        element = document.querySelector(`.${styles.section2Container}`);
         createObserver();
     }, false);
 
@@ -46,27 +46,22 @@ const Section2 = () => {
 
     const handleIntersect = (entries, observer) => {
         entries.forEach(entry => {
-            // console.log("prevRatio:  ", prevRatio);
-            // console.log("entry.intersectionRation:  ", entry.intersectionRatio);
-            if(entry.intersectionRatio > prevRatio) {
+            if(entry.intersectionRatio > 0.9) {
                 // console.log(entry.target);
                 // console.log(entry.intersectionRatio);
                 // console.log(100 - entry.intersectionRatio*100);
-                entry.target.style.width = `${entry.intersectionRatio*100}%`;
-                // entry.target.style.left = `${entry.intersectionRatio*100}%`;
+                // entry.target.style.width = `${entry.intersectionRatio*100}%`;
+                entry.target.style.width = `100%`;
             }
 
             prevRatio = entry.intersectionRatio;
         })
     }
 
-    element = document.querySelector(`.${styles.section2Container}`);
-    console.log(element?.offsetTop);
-
     return (
         <div id={"container"} className={styles.section2Container}>
             <div className={styles.backdrop}></div>
-            <div className={styles.cover}></div>
+            {/* <div className={styles.cover}></div> */}
             <FontAwesomeIcon icon="play-circle" className={styles.playBtn} size={'2x'} />
             <div className={styles.section2Title}>
                 At vero eos et accusamus et iusto odio dignissimos.
