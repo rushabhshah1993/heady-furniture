@@ -19,8 +19,9 @@
         background: #FFFFFF;
         position: absolute;
         top: 0;
-        left: -100%;
-        transition: left 1s;
+        // left: 0;
+        width: 0%;
+        transition: width 1s;
     }
 
     .playBtn {

@@ -24,6 +24,8 @@ const Section2 = () => {
             threshold: buildThresholdList()
         };
 
+        console.log(options);
+
         observer = new IntersectionObserver(handleIntersect, options);
         observer.observe(element);
     }
@@ -37,22 +39,29 @@ const Section2 = () => {
             thresholds.push(ratio);
         }
         
-        thresholds.push(0);
+        thresholds.unshift(0);
+        // thresholds.reverse();
         return thresholds;
     }
 
     const handleIntersect = (entries, observer) => {
-        console.log(entries);
         entries.forEach(entry => {
+            // console.log("prevRatio:  ", prevRatio);
+            // console.log("entry.intersectionRation:  ", entry.intersectionRatio);
             if(entry.intersectionRatio > prevRatio) {
-                console.log(entry.target);
-                console.log(entry.intersectionRatio);
-                entry.target.style.left = `-${entry.intersectionRatio*100}%`;
+                // console.log(entry.target);
+                // console.log(entry.intersectionRatio);
+                // console.log(100 - entry.intersectionRatio*100);
+                entry.target.style.width = `${entry.intersectionRatio*100}%`;
+                // entry.target.style.left = `${entry.intersectionRatio*100}%`;
             }
 
             prevRatio = entry.intersectionRatio;
         })
     }
+
+    element = document.querySelector(`.${styles.section2Container}`);
+    console.log(element?.offsetTop);
 
     return (
         <div id={"container"} className={styles.section2Container}>
