@@ -17,7 +17,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 
 import styles from './main.scss';
 
-import { getSections } from './../../utils/utils';
+import { getSections, checkScrolling } from './../../utils/utils';
 import { setSectionsDimensions } from './../../store/actions/navItemActions';
 
 
@@ -30,33 +30,29 @@ const Main = props => {
     window.onload = () => {
         if(window.scrollY !== 0) window.scrollTo({top: 0,behavior: 'smooth'});
     };
-    
-    useEffect(() => {
-        let mainContentChildren = document.getElementById(styles.mainContent).children;
-        if(mainContentChildren) {    
-            let sections = getSections(mainContentChildren);
-            setSections(sections);
-            if(props.navItem.sectionsDimensions.length === 0)
-                props.setSectionsDimensions(sections);
-            setActiveSection("details");
-        }
-    }, [window.scrollY === 0])
-    
 
-    window.addEventListener('scroll', function() {
-        if(sections) {
-            for(let section of sections) {
-                if(this.scrollY < section.bottom && this.scrollY > section.top) {
-                    setActiveSection(section.id);
-                    break;
-                }
+    useEffect(() => {
+        if(window.screenY === 0) {
+            let mainContentChildren = document.getElementById(styles.mainContent).children;
+            if(mainContentChildren) {    
+                let sections = getSections(mainContentChildren);
+                setSections(sections);
+                if(props.navItem.sectionsDimensions.length === 0)
+                    props.setSectionsDimensions(sections);
+                setActiveSection("details");
             }
         }
+    }, [])
 
-        let footerTop = document.getElementById("footer").offsetTop;
-        if(this.scrollY >= (footerTop - 900)) {
-            setActiveSection(null);
+    window.addEventListener('scroll', function() {
+        if(timeout) {
+            clearTimeout(timeout);
         }
+        let timeout = setTimeout(() => {
+            timeout = null;
+            let section = checkScrolling(this.scrollY, sections);
+            if(section !== activeSection) setActiveSection(section);
+        }, 1000)
     })
 
     return (

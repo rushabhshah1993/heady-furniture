@@ -1,6 +1,7 @@
 @import './../../utils/variables.scss';
 
 .relatedContainer {
+    margin-bottom: 20vh;
 
     .sectionTitle {
         font-size: 1.75rem;
@@ -55,6 +56,7 @@
 (max-width: $breakpoint-tablet) {
     .relatedContainer {
         height: auto !important;
+        margin-bottom: initial;
 
         .relatedProductsContainer {
             grid-template-columns: 50% 50%;

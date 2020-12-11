@@ -1,7 +1,7 @@
 @import './../../utils/variables.scss';
 
 .reviewsContainer {
-    height: 100vh - 10vh;
+    margin-bottom: 20vh;
 
     .reviewsContainerTitle {
         font-size: 1.75rem;
@@ -37,6 +37,8 @@
 (min-width: $breakpoint-phone) and 
 (max-width: $breakpoint-tablet) {
     .reviewsContainer {
+        margin-bottom: initial;
+
         .hideReviews {
             height: 400px;
         }

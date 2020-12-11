@@ -26,7 +26,7 @@ const Related = props => {
     })
 
     return (
-        <div style={{height: "100vh"}} id="related" className={styles.relatedContainer}>
+        <div id="related" className={styles.relatedContainer}>
             <p className={styles.sectionTitle}>Related Products</p>
             <div className={styles.relatedProductsContainer}>
                 {relatedProducts}
