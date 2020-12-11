@@ -11,7 +11,6 @@ const ItemPageNavigation = props => {
 
     const itemClickHandler = event => {
         let sections = props.navItem.sectionsDimensions;
-        console.log(sections);
         let selectedSection = sections.find(section => section.id === event.target.id);
         window.scrollTo({
             top: selectedSection.top,
