@@ -28,7 +28,8 @@
         writing-mode: vertical-rl;
         transform: rotate(90deg);
         direction: rtl;
-        top: -140px;
+        // top: -140px;
+        top: -35%;
         font-family: 'Medium';
     }
 
@@ -85,7 +86,7 @@
         }
 
         .asideText::before {
-            
+            top: -25%;
         }
 
         .secondaryImg {
