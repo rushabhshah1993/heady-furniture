@@ -21,3 +21,16 @@ export const checkScrolling = (value, sections) => {
         }
     }
 }
+
+export const buildThresholdList = steps => {
+    let thresholds = [];
+    let numSteps = steps;
+
+    for (let i=1.0; i<=numSteps; i++) {
+        let ratio = i/numSteps;
+        thresholds.push(ratio);
+    }
+    
+    thresholds.unshift(0);
+    return thresholds;
+}
